@@ -132,15 +132,19 @@ body {
 
 .paragraphs-container{
   display: flex;
+}
+
+.undr-card {
+  display: flex;
   justify-content: space-between;
   gap: 30px;
+  font-weight: 700;
 }
 
 .h3 {
   flex: 1 1 270px;
-  height: 100px;
+  padding: 5px;
   color: #212121;
-  font-weight: 700;
 }
 
 .paragraph {
@@ -239,19 +243,18 @@ body {
 
 .team-card {
   width: 25%;
-  height: 260px;
   padding: 0 15px;
 }
 
 .team-card img {
   width: 100%;
-  height: 100%;
+  height: 294px;
   object-fit: cover;
 }
 
 .position { 
   text-align: center;
-  margin: 30px 50px;
+  padding: 30px;
   font-weight: 500;
   font-size: 16px;
   color: #212121;
@@ -261,4 +264,85 @@ body {
   margin-top: 10px;
   color: #757575;
   font-weight: 400;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+  display: flex;
+}
+
+
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 98px 0 30px;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.portfolio-buttons button {
+ cursor: pointer;
+ padding: 6px 25px;
+ border-radius: 4px;
+ background: #F5F4FA;
+}
+
+.portfolio-buttons button:hover {
+  background: #2196F3;
+  color: #fff;
+}
+
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin-bottom: 94px;
+}
+
+.portfolio-card {
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #EEEEEE;
+}
+
+
+.portfolio-card img {
+  object-fit: cover;
+}
+
+.portfolio-position {
+  padding: 20px 24px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.portfolio-position p {
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.portfolio-disc {
+}
+
+.portfolio-paragraph {
+}
+
+.portfolio-span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  padding: 63px 24px;
+}
+
+.portfolio-card:hover .portfolio-span {
+  opacity: 1;
 }
