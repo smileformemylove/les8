@@ -34,7 +34,7 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1200px;
   padding: 0 15px;
 }
 
@@ -93,17 +93,21 @@ body {
   color: #757575;
 }
 
+.header-burger {
+  display: none;
+}
+
 /* HERO */
 
 .hero {
-  background: url(../img/main-bg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/main-bg.jpg);
   min-height: 600px;
   display: flex;
   align-items: center;
 }
 
 .hero-container {
-  width: 690px;
+  max-width: 690px;
   margin: 0 auto;
   text-align: center;
 }
@@ -131,6 +135,10 @@ body {
   display: flex;
 }
 
+.under-hero-article{
+  flex: 1 1 20%;
+}
+
 .paragraphs-container{
   display: flex;
 }
@@ -156,8 +164,6 @@ body {
 
 
 .svg-item {
-  margin: 25px 100px;
-  display: flex;
   height: 70px;
   width: 70px;
 }
@@ -167,7 +173,6 @@ body {
 }
 .spriteee {
   display: flex;
-  width: 270px;
   height: 120px;
   justify-content: center;
   align-items: center;
@@ -193,7 +198,6 @@ body {
 
 .doing-cards {
   display: flex;
-  flex-flow: nowrap;
   margin: 0 -15px;
   gap: 15px;
 }
@@ -368,21 +372,24 @@ body {
 }
 
 .reg-item {
-  padding: 19px 65px;
-  border: 1px solid #AFB1B8;
-  cursor: pointer;
-  border-radius: 4px;
+  flex: 1;
+  
 }
 
 .reg-item svg {
   fill: #AFB1B8;
-  width: 40px;
-  height: 50px;
-  
+  width: 106px;
+  height: 40px;
 }
 
 .reg-item a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  height: 70px;
+
 }
 
 .reg-item:hover svg {
@@ -481,3 +488,84 @@ body {
 .portfolio-card:hover .portfolio-span {
   opacity: 1;
 }
+
+@media screen and (max-width: 1200px) {
+
+  .portfolio-buttons{
+    margin: 50px 0 30px;
+  }
+
+  .header-list {
+    gap: 10px;
+  }
+  .header-logo{
+    margin-right: 20px;
+  }
+
+  .header-phone {
+    margin-left: 30px;
+  }
+  
+
+}
+
+@media screen and (max-width: 992px) {
+
+  
+
+  .portfolio-cards{
+    gap: 15px;
+  }
+
+  .portfolio-card {
+    flex: 1 1 45%;
+  }
+
+  
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .header-burger{
+    width: 24px;
+    height: 16px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .header-burger::before,
+  .header-burger::after,
+  .header-burger span {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: black;
+  }
+
+  .header-burger::after {
+    top: auto;
+    bottom: 0;
+  }
+
+  .header-burger span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  
+  
+}
+
+@media screen and (max-width: 540px){
+
+  .portfolio-card {
+    flex: 1 1 100%;
+  }
+
+}
+
